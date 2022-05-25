@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "qq-place"
+version = "0.1.0"
+description = ""
+authors = ["Redlnn <w731347477@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+opencv-python = "^4.5.5"
+numpy = "^1.22.4"
+fastapi = "^0.78.0"
+uvicorn = {extras = ["standard"], version = "^0.17.6"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.5"
+pydantic = "^1.9.1"
+pillow = "^9.1.1"
+orjson = "^3.6.8"
+loguru = "^0.6.0"
+sqlalchemy = {extras = ["asyncmy", "aiosqlite"], version = "^1.4.36"}
+sqlmodel = "^0.0.6"
+slowapi = "^0.1.5"
+
+[tool.poetry.dev-dependencies]
+black = ">=22.3.0"
+isort = ">=5.10.1"
+flake8 = ">=4.0.1"
+graia-ariadne = {extras = ["graia"], version = "^0.6.16"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "tuna-tsinghua"
+default = false
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[[tool.poetry.source]]
+name = "aliyun"
+default = false
+url = "https://mirrors.aliyun.com/pypi/simple/"
+
+[[tool.poetry.source]]
+name = "tencent-cloud"
+default = false
+url = "https://mirrors.cloud.tencent.com/pypi/simple"
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+skip-string-normalization = true
+safe = true
+
+[tool.isort]
+profile = "black"

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    touch-action: none;
+    background-image: url('/static/img/bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    width: 1480px;
+    padding: 25px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    background-color: #00000088;
+    border-radius: 10px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-area {
+    position: relative;
+    width: 1369px;
+    height: 903px;
+    background-image: url('/static/img/canvas.png');
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.canvas {
+    position: absolute;
+    top: 115px;
+    left: 42px;
+}
+
+.canvas:focus {
+    outline: none;
+}
+
+.pannel {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 110px;
+}
+
+.positon {
+    margin-top: 47px;
+    padding: 12px 0;
+    background-color: #00000088;
+    margin-bottom: 10px;
+    width: 105px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.rate {
+    background-color: #00000088;
+    margin-bottom: 10px;
+    width: 105px;
+    padding: 12px 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.palette {
+    display: grid;
+    width: 105px;
+    height: 605px;
+    grid-template-columns: repeat(2, 35px);
+    grid-template-rows: repeat(16, 35px);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #00000088;
+    border-radius: 10px;
+}
+
+.color {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.color:hover {
+    position: relative;
+    width: 33px;
+    height: 33px;
+}
+
+.popout {
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    min-width: 80px;
+    padding: 5px 8px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    background-color: #000000dd;
+    border-radius: 5px;
+    white-space: nowrap;
+    transform:translate(-50%,-50%)
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Place</title>
+        <link rel="stylesheet" href="/static/css/index.css" />
+        <script>
+            window.onload = () => {
+                const width = document.documentElement.scrollWidth || document.body.scrollWidth
+                const height = document.documentElement.scrollHeight || document.body.scrollHeight
+                if (width < 1480 || height < 1100) alert('请将窗口放大到 1700*1100 以上或使用更高分辨率的设备查看')
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <input type="file" accept="text/plain" onchange="openTxtFile(event)" />
+                <input type="file" accept="image/*" onchange="openImage(event)" />
+                <button onclick="getImage()">获取图片</button>
+            </header>
+            <div class="board">
+                <div class="canvas-area">
+                    <canvas class="canvas" id="canvas" width="1280" height="720" tabindex="0">你的浏览器不受支持</canvas>
+                </div>
+                <div class="pannel">
+                    <div id="positon" class="positon">(x, y)<br />(0, 0)</div>
+                    <div id="rate" class="rate">1.0x</div>
+                    <div class="palette">
+                        <span class="color" style="background-color: #000000"></span>
+                        <span class="color" style="background-color: #ffffff"></span>
+                        <span class="color" style="background-color: #515252"></span>
+                        <span class="color" style="background-color: #898d90"></span>
+                        <span class="color" style="background-color: #6d001a"></span>
+                        <span class="color" style="background-color: #d4d7d9"></span>
+                        <span class="color" style="background-color: #be0039"></span>
+                        <span class="color" style="background-color: #ff4500"></span>
+                        <span class="color" style="background-color: #ffa800"></span>
+                        <span class="color" style="background-color: #ffd635"></span>
+                        <span class="color" style="background-color: #fff8b8"></span>
+                        <span class="color" style="background-color: #00a368"></span>
+                        <span class="color" style="background-color: #00cc78"></span>
+                        <span class="color" style="background-color: #7eed56"></span>
+                        <span class="color" style="background-color: #00756f"></span>
+                        <span class="color" style="background-color: #009eaa"></span>
+                        <span class="color" style="background-color: #00ccc0"></span>
+                        <span class="color" style="background-color: #2450a4"></span>
+                        <span class="color" style="background-color: #3690ea"></span>
+                        <span class="color" style="background-color: #51e9f4"></span>
+                        <span class="color" style="background-color: #493ac1"></span>
+                        <span class="color" style="background-color: #6a5cff"></span>
+                        <span class="color" style="background-color: #94b3ff"></span>
+                        <span class="color" style="background-color: #811e9f"></span>
+                        <span class="color" style="background-color: #b44ac0"></span>
+                        <span class="color" style="background-color: #e4abff"></span>
+                        <span class="color" style="background-color: #de107f"></span>
+                        <span class="color" style="background-color: #ff3881"></span>
+                        <span class="color" style="background-color: #ff99aa"></span>
+                        <span class="color" style="background-color: #6d482f"></span>
+                        <span class="color" style="background-color: #9c6926"></span>
+                        <span class="color" style="background-color: #ffb470"></span>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                使用鼠标滚轮可以放大/缩小图片，按住鼠标左键可以拖动图片，点击右边的颜色可以复制颜色代码噢~<br />
+                粤ICP备18012345号-1
+            </footer>
+        </div>
+        <script src="/static/js/place.js"></script>
+    </body>
+</html>
