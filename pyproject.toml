@@ -15,7 +15,7 @@ python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 python-multipart = "^0.0.5"
 pydantic = "^1.9.1"
-pillow = "^9.1.1"
+pillow = "^9.3.0"
 orjson = "^3.6.8"
 loguru = "^0.6.0"
 sqlalchemy = {extras = ["asyncmy", "aiosqlite"], version = "^1.4.36"}
